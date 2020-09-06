@@ -6,6 +6,7 @@ public class Lab2 {
         System.out.println("The sum is " + sum(3, 5));
         System.out.println("The mult is "+ mult(3, 5));
         System.out.println("The result is " + divide(3, 5));
+        System.out.println("The result is " + substract(3, 5));
 
    }
 
@@ -20,6 +21,10 @@ public class Lab2 {
     static double divide(double first, double second){
         double result = first / second;
     return result;
+    }
+    static double substract(double first, double second){
+        double result = first - second;
+        return result;
     }
 
 
