@@ -16,29 +16,32 @@ public class AppMain {
         System.out.println(bobby.getBreed());
         bobby.setIsMale(true);
         System.out.println(bobby.getIsmale());
-
+        bobby.eat();
 
         Adoptor laura= new Adoptor();
-        laura.setNameA("Maria");
-        System.out.println(laura.getNameA());
+        laura.setName("Maria");
+        System.out.println(laura.getName());
         laura.setBudget(2000);
         System.out.println(laura.getBudget());
-        laura.work();
+
 
         DogFood pedygree = new DogFood();
-        pedygree.setNameF("MancareDeCaini");
-        System.out.println(pedygree.getNameF());
-        System.out.println(pedygree.price);
+        pedygree.setName("MancareDeCaini");
+        System.out.println(pedygree.getName());
 
         Activity favoriteActivity = new Activity();
         favoriteActivity.setName("running");
         System.out.println(favoriteActivity.getName());
 
        Vet myVet = new Vet();
-        myVet.setNameV("Georgica");
-       System.out.println(myVet.getNameV());
+        myVet.setName("Georgica");
+       System.out.println(myVet.getName());
         myVet.setSpecialisation("nutrition");
         System.out.println(myVet.getSpecialisation());
+
+       Cat myCat = new Cat();
+        myCat.setName("Felix");
+       System.out.println(myCat.getName());
 
     }
 }
