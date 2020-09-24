@@ -135,8 +135,8 @@ public class LogicalOperations {
             for (int i = a; i <= b; i++) {
                 System.out.println(i);
             }
-        } else if (b > a) {
-            for (int i = b; i <= b; i++) {
+        } else if (b < a) {
+            for (int i = b; i <= a; i++) {
                 System.out.println(i);
             }
         }
@@ -249,7 +249,8 @@ public class LogicalOperations {
             } while (i <= nr);
         }
     }
-//Problema 7
+
+    //Problema 7
     public void doWhileSumAndAverage(int start, int end) {
         int sum = 0;
         float count = 0;
@@ -263,7 +264,8 @@ public class LogicalOperations {
         } while (i <= end);
 
     }
-//Problema 8
+
+    //Problema 8
     public void divisibility(int a, int b) {
         int sum = 0;
         float count = 0;
@@ -278,56 +280,157 @@ public class LogicalOperations {
     }
 
     //Problema 9
-    public void Fibonacci(int count ){
+    public void Fibonacci(int count) {
         int a = 0;
         int b = 1;
         int i = 1;
         System.out.println(a);
         System.out.println(b);
 
-        do{
+        do {
             System.out.println(i);
-            i=a + b;
+            i = a + b;
             a = b;
             b = i;
-            i++;}while(i<=count);
+            i++;
+        } while (i <= count);
 
     }
 
 
 //Problema 10
 
-        public void cozaLozaWoza(int x, int y){
+    public void cozaLozaWoza(int x, int y) {
         int i = x;
 
 
-            while (i <= 110) {
-                boolean test = false;
-                if (i % 3 == 0) {
-                    System.out.print("coza");
-                    test = true;
-                }
-                if (i % 5 == 0) {
-                    System.out.print("loza");
-                    test = true;
-                }
-                if (i % 7 == 0) {
-                    System.out.print("woza");
-                    test = true;
-                }
-                if (!test) {
-                    System.out.print(i);
-                }
-                System.out.print(" ");
-                if (i % 11 == 0) {
-                    System.out.println();
-                }
-                i++;
+        while (i <= 110) {
+            boolean test = false;
+            if (i % 3 == 0) {
+                System.out.print("coza");
+                test = true;
+            }
+            if (i % 5 == 0) {
+                System.out.print("loza");
+                test = true;
+            }
+            if (i % 7 == 0) {
+                System.out.print("Woza");
+                test = true;
+            }
+            if (!test) {
+                System.out.print(i);
+            }
+            System.out.print(" ");
+            if (i % 11 == 0) {
+                System.out.println();
+            }
+            i++;
+        }
+    }
+
+    //Tema 13
+    //Problema 2
+    public int[] getArrayNumber(int maxValue) {
+        int[] myArray = new int[maxValue];
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = i + 1;
+            System.out.println(myArray[i]);
+        }
+        return myArray;
+    }
+
+    //Problema 3
+    public int[] evenArrayList(int maxValue) {
+        int[] evenArray = new int[maxValue];
+        for (int i = 0; i < evenArray.length; i++) {
+            evenArray[i] = i + 1;
+            if (evenArray[i] % 2 == 0) {
+                System.out.println(evenArray[i]);
             }
         }
+        return evenArray;
+    }
+
+//Problema 4
+
+    public float averageArray(int[] myArray) {
+        float sum = 0;
+        for (int i = 0; i < myArray.length; i++) {
+            sum = sum + myArray[i];
+        }
+        return sum / myArray.length;
+    }
+
+    //Problema 5
+    public boolean findString(String[] findStringArray,String textInput) {
+
+        for (String i : findStringArray) {
+            if (findStringArray.equals(textInput))
+                return true;
+
+        } return false;
+
+    }
+
+    // }return "value";
+//Problema 6
+   public int valuePosition(int[] arr, int x) {
+       for ( int i = 0; i < arr.length; i++)
+          if (arr[i] == x){
+    return i;
+          }
+       return x;
+   }
+
+
+
+
+        //Problema 7
+
+
+   //Problema 8
+   //public int[] listMinusOne(int maxValue, int x ) {
+      // int[] myArray = new int[maxValue];
+       //for (int i = 0; i<myArray.length;i++) {
+         //  myArray[i] = i + 1;
+           //if (myArray[i]!=x){
+             //  System.out.println(myArray[i]);}
+       //}
+       //return myArray;
+  // }
+//Problema 9
+
+    public int secondSmallestValue(int array[]) {
+        int first, second;
+
+        first = second = Integer.MAX_VALUE;
+        for (int i = 0; i < array.length ; i ++)
+        {
+            if (array[i] < first)
+            {
+                second = first;
+                first = array[i];
+            }
+
+            else if (array[i] < second && array[i] != first)
+                second = array[i];
+
+        }return second;
 
 
     }
+
+//Problema 10
+
+}
+}
+
+
+
+
+
+
 
 
 
