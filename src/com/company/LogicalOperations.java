@@ -1,6 +1,8 @@
 package com.company;
 
-public class LogicalOperations {
+import java.util.List;
+
+public class LogicalOperations<listSix> {
 
 
     public int verifyHigherNumber(int a, int b) {
@@ -117,7 +119,7 @@ public class LogicalOperations {
 
     //Problema 2
     public void startNumberMethod1(int startNumber) {
-        for (int i = startNumber; i <= -100; i--) {
+        for (int i = startNumber; i >= -100; i--) {
             System.out.println(i);
         }
     }
@@ -363,68 +365,132 @@ public class LogicalOperations {
     }
 
     //Problema 5
-    public boolean findString(String[] findStringArray,String textInput) {
+    public boolean findString(String[] findStringArray, String textInput) {
 
         for (String i : findStringArray) {
             if (findStringArray.equals(textInput))
                 return true;
 
-        } return false;
+        }
+        return false;
 
     }
 
     // }return "value";
 //Problema 6
-   public int valuePosition(int[] arr, int x) {
-       for ( int i = 0; i < arr.length; i++)
-          if (arr[i] == x){
-    return i;
-          }
-       return x;
-   }
+    public int valuePosition(int[] arr, int x) {
+        for (int i = 0; i < arr.length; i++)
+            if (arr[i] == x) {
+                return i;
+            }
+        return x;
+    }
 
 
+    //Problema 7
 
 
-        //Problema 7
-
-
-   //Problema 8
-   //public int[] listMinusOne(int maxValue, int x ) {
-      // int[] myArray = new int[maxValue];
-       //for (int i = 0; i<myArray.length;i++) {
-         //  myArray[i] = i + 1;
-           //if (myArray[i]!=x){
-             //  System.out.println(myArray[i]);}
-       //}
-       //return myArray;
-  // }
+    //Problema 8
+    //public int[] listMinusOne(int maxValue, int x ) {
+    // int[] myArray = new int[maxValue];
+    //for (int i = 0; i<myArray.length;i++) {
+    //  myArray[i] = i + 1;
+    //if (myArray[i]!=x){
+    //  System.out.println(myArray[i]);}
+    //}
+    //return myArray;
+    // }
 //Problema 9
 
     public int secondSmallestValue(int array[]) {
         int first, second;
 
         first = second = Integer.MAX_VALUE;
-        for (int i = 0; i < array.length ; i ++)
-        {
-            if (array[i] < first)
-            {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < first) {
                 second = first;
                 first = array[i];
-            }
-
-            else if (array[i] < second && array[i] != first)
+            } else if (array[i] < second && array[i] != first)
                 second = array[i];
 
-        }return second;
+        }
+        return second;
 
 
     }
 
 //Problema 10
 
+
+//Tema 14
+
+//Problema 1
+
+//public void  printListValues(List<Integer>myList) {
+    //  for (Integer i : myList) {
+    //    System.out.println(i);
+
+    //}
+
+//}
+//Problema 2
+    //public void addValueAtFinal(List<Integer>listTwo, int value) {
+    //   listTwo.add(5, value);
+    //System.out.println(listTwo);
+    //  }
+
+
+// Problema 3
+
+    //  public void  printListValues(List<Integer>myList, int value) {
+    // for (int i = value;i<myList.size();i++){
+
+    //    System.out.println(i);
+    //   }
+
+    //   }
+
+
+//Problema 4
+    // public void fromLastToFirst(List<Integer> listFour) {
+    //for (int i = 0; i < listFour.size(); i--) {
+    //System.out.println(i);
+    // }
+
+    // }
+//Problema 5
+    //public void stringValueToPosition(List<String>listFive,int value , String textInput){
+    //for(int i = 0; i<listFive.size();i++){
+    //  if (i==value){
+    //   listFive.add(value, textInput);}
+    // }
+    //System.out.println(listFive);
+    //   }
+//Problema 6
+//public void lastToFirst(List<String>listSix, String textInput){
+    //  listSix.add(0, textInput);
+    //System.out.println(listSix);
+
+//}
+    //Problema 7
+
+    // public void indexForValue(List<Integer>listSeven){
+    //   for( int i=0;i<listSeven.size();i++){
+    //   System.out.println("Pe pozitia " + i + " se afla valoarea " + listSeven.get(i));
+    // }
+    // }
+    //Problema 8
+    public int maxNumberList(List<Integer> listEight) {
+        int max = 0;
+        for (int i = 0; i < listEight.size(); i++) {
+            if (listEight.get(i)>max)
+                max = listEight.get(i);
+            return max;
+        }
+
+    }
 }
-}
+
 
 
 
