@@ -5,4 +5,18 @@ public class Adoptor extends Human {
     private double budget;
 
 
+    @Override
+    public void work() {
+
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    @Override
+    public void speak() {
+
+    }
 }

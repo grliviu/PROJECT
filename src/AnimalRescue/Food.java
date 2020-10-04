@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class Food {
+public abstract class Food {
 
     private String name;
     private double price;
@@ -35,6 +35,9 @@ public class Food {
     public void setInStock(boolean inStock) {
         this.inStock = inStock;
     }
+
+    public abstract void isConsumed ();
+    public abstract void isRotting();
 
 
 }

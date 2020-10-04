@@ -1,6 +1,8 @@
 package com.company;
 
+import java.sql.SQLOutput;
 import java.util.List;
+import java.util.Scanner;
 
 public class LogicalOperations<listSix> {
 
@@ -435,7 +437,7 @@ public class LogicalOperations<listSix> {
 //}
 //Problema 2
     //public void addValueAtFinal(List<Integer>listTwo, int value) {
-    //   listTwo.add(5, value);
+    //   listTwo.add(listTwo.size, value);
     //System.out.println(listTwo);
     //  }
 
@@ -483,13 +485,36 @@ public class LogicalOperations<listSix> {
     public int maxNumberList(List<Integer> listEight) {
         int max = 0;
         for (int i = 0; i < listEight.size(); i++) {
-            if (listEight.get(i)>max)
+            if (listEight.get(i) > max)
                 max = listEight.get(i);
             return max;
         }
 
+        return max;
     }
+
+    // Lab 7 Problema 5
+    public int arrayL() {
+        int[] arrL = {1, 2, 3, 4, 5};
+        Scanner scanL = new Scanner(System.in);
+        int l = scanL.nextInt();
+        try {
+            System.out.println(arrL[scanL.nextInt()]);
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            System.out.println("Inside catch, number too large");
+        }
+        return arrL[l];
+    }
+//Problema 6
+public  void wait(int t ){
+        Thread.sleep(t);
+    System.out.println(t);
 }
+
+}
+
+
+
 
 
 

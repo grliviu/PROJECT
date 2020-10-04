@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class Human {
+public abstract class Human {
     private String name ;
     private double budget;
 
@@ -18,4 +18,8 @@ public class Human {
     public void setBudget(double budget){
         this.budget=budget;
     }
+
+    public abstract void work();
+    public abstract void sleep();
+    public abstract void speak();
 }
