@@ -1,12 +1,17 @@
+import com.company.MathOperations;
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
 
     public static void main(String[] args) {
+
+
         System.out.println("The result is " + calcul(-5, 8, 6));
         System.out.println("The result is " + calcula(55, 9, 9));
         System.out.println("The result is " + calculb(20, 3, 5, 8));
         System.out.println("The result is " + calculc(5, 15, 3, 2, 8, 3));
-        System.out.println("The sum is " + sum(7, 10));
-        System.out.println("The result is " + divide(7, 10));
+        //System.out.println("The sum is " + sum(7, 10));
+        //System.out.println("The result is " + divide(7, 10));
         System.out.println("Restul impartirii este " + rest(13, 7));
         System.out.println("Temperatura in grade Celsius este " + celsius(5, 9, 32, 32));
         System.out.println("Lungimea in metri este " + inchtometers(200, 0.0254));
@@ -45,15 +50,7 @@ public class Main {
     }
 
 
-    static double sum(double a, double b) {
-        double result = a + b;
-        return result;
-    }
 
-    static double divide(double x, double y) {
-        double result = x / y;
-        return result;
-    }
 
     static double calcul(double a, double b, double c) {
         double result = a + b * c;
@@ -117,8 +114,11 @@ public class Main {
     }
 
 
+    }
 
-}
+
+
+
 
 
 
